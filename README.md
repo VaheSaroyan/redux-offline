@@ -1,3 +1,7 @@
+```cli
+yarn add @vahesaroyan/redux-offline
+```
+
 ```js
 Fixed work for react native support
 
