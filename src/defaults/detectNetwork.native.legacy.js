@@ -4,7 +4,6 @@ import NetInfo from '@react-native-community/netinfo'
 
 class LegacyDetectNetwork {
   constructor(callback) {
-    console.log(123)
     this._reach = null
     this._isConnected = null
     this._isConnectionExpensive = null

@@ -42,7 +42,6 @@ class DetectNetwork {
    * @private
    */
   _setReach = (reach) => {
-    console.log(reach)
     this._reach = reach
     this._isConnected = this._getConnection(reach)
   }
@@ -119,14 +118,12 @@ class DetectNetwork {
    */
   _addListeners() {
     NetInfo.addEventListener((connectionInfo) => {
-      console.log({ NetInfo: connectionInfo })
       this._setShouldInitUpdateReach(false)
       this._update(connectionInfo)
     })
     AppState.addEventListener('change', async () => {
       this._setShouldInitUpdateReach(false)
       const connectionInfo = await NetInfo.fetch()
-      console.log({ AppState: connectionInfo })
       this._update(connectionInfo)
     })
   }
